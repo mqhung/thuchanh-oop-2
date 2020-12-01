@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlashLamp</title>
+    <script src="Battery.js"></script>
+    <script src="FlashLamp.js"></script>
+</head>
+<body>
+<script>
+    //tao doi tuong battery
+    let battery = new Battery();
+    battery.energy = 50;
+    //tao doi tuong flashLamp
+    let flashLamp = new FlashLamp();
+    flashLamp.battery = battery;
+
+    document.write("Battery info:" + flashLamp.getBattery() + "<br/>");
+
+    document.write("Turn on<br/>")
+    flashLamp.turnOn();
+    flashLamp.light();
+    document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
+
+    document.write("Turn off<br/>")
+    flashLamp.turnOff();
+    flashLamp.light();
+
+</script>
+</body>
+</html>
